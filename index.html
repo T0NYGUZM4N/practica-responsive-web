@@ -2,55 +2,52 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uniformes Xpress</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
       <nav class="barnav">
+        <div class="logo-container">
+          <a href="#inicio">
+            <img src="./logo-uniformesxpress.png" alt="logo de la empresa" class="logo"
+          </a>
+        </div>
         <div class="left-nav">
           <a href="#inicio" class="home">Inicio</a>
           <a href="#contacto" class="contacto">Sobre Nosotros</a>
           <a href="#proveedores" class="proveedores">Nuestros Proveedores</a>
         </div>
         <div class="right-nav">
-          <a href="#cotiza" class="cotiza">Cotiza con Nosotros</a>
+          <a href="#formulario" class="cotiza">Cotiza con Nosotros</a>
         </div>
       </nav>
     </header>
     <main>
       <div class="container1">
         <div class="image-section1">
-          <img src="./ejemplo-bordado1.png" alt="ejemplo de bordado" />
+          <img src="./logo-uniformesxpress.png" alt="ejemplo de bordado">
         </div>
         <div class="text-section1">
-          <h1>Uniformes Xpress</h1>
-          <p>Tu mejor solución En bordado.</p>
+          <h1>¿Quiénes somos?</h1>
+          <p> Nuestra empresa fue creada en el 2012 con el objetivo de
+            proporcionar uniformes ideales al sector comercial y empresarial de
+            la región, a lo largo de los años logramos importar nuestros
+            productos con clientes nacionales y del extranjero</p>
           <button>Solicita tu Cotización</button>
         </div>
       </div>
       <div class="banner">
-        <img src="./ejemplo-bordado2.png" alt="banner" />
+        <img src="./ejemplo-bordado2.png" alt="banner">
         <div class="overlay">
-          <h1>Comprometidos con la excelencia en bordados.</h1>
+          <h1>Comprometidos con la excelencia en bordados</h1>
           <p>Calidad y diseño único</p>
         </div>
       </div>
-      <section>
-        <div>
-          <h2>¿Quiénes somos?</h2>
-          <p>
-            Nuestra empresa fue creada en el 2012 con el objetivo de
-            proporcionar uniformes ideales al sector comercial y empresarial de
-            la región, a lo largo de los años logramos importar nuestros
-            productos con clientes nacionales y del extranjero.
-          </p>
-        </div>
-      </section>
       <div class="products-section3">
-        <h1>Variedad de Productos</h1>
-        <p>Ofrecemos una amplia gama de bordados.</p>
+        <h1>Principales servicios</h1>
+        <p>Contamos con distintas técnicas las cuales varian por tipo de tela o cantidad de producto</p>
         <div class="image-section3">
           <img
             src="./ejemplo-bordado3.png"
@@ -60,33 +57,44 @@
         <div class="text-section3">
           <div class="grid-container">
             <div class="grid-item">
-              <h3>Personalización Total:</h3>
+              <h3>Bordado en prenda</h3>
+              <img src="./tipo-bordado-prenda.jpg" alt="imagen de bodado en prenda">
               <p>Cada diseño es único y adaptado a tus necesidades.</p>
             </div>
             <div class="grid-item">
-              <h3>Entrega Rápida:</h3>
+              <h3>Bordado en gorra</h3>
+              <img src="./tipo-bordado-gorra.jpg" alt="imagen de bodado en gorra">
               <p>Recibe tus uniformes en el menor tiempo posible.</p>
             </div>
             <div class="grid-item">
-              <h3>Atención al Cliente:</h3>
+              <h3>Suministros de bordado</h3>
+              <img src="./tipo-parches-bordados.jpg" alt="imagen de suministros de bordado">
               <p>Estamos aquí para ayudarte en cada paso del proceso.</p>
             </div>
             <div class="grid-item">
-              <h3>Calidad Garantizada:</h3>
+              <h3>Serigrafía</h3>
+              <img src="./tipo-serigrafia.jpg" alt="imagen de trabajo en serigrafia">
               <p>Nuestros productos cumplen con los más altos estándares.</p>
             </div>
             <div class="grid-item">
-              <h3>Experiencia Comprobada:</h3>
+              <h3>DTF</h3>
+              <img src="./tipo-DTF.jpg" alt="imagen de trabajo en DTF">
               <p>Más de 10 años en el mercado de bordados.</p>
             </div>
             <div class="grid-item">
-              <h3>Usado por empresas líderes:</h3>
+              <h3>Sublimación</h3>
+              <img src="./tipo-sublimacion.jpg" alt="imagen de trabajo en sublimacion">
+              <p>Nuestros clientes incluyen compañías de renombre.</p>
+            </div>
+            <div class="grid-item">
+              <h3>Vinil textil</h3>
+              <img src="./tipo-vinil-textil.jpg" alt="imagen de trabajo en corte vinil">
               <p>Nuestros clientes incluyen compañías de renombre.</p>
             </div>
           </div>
         </div>
       </div>
-      <section class="proveedores-section">
+      <section id="proveedores" class="proveedores-section">
         <h2>Nuestros Proveedores</h2>
         <div class="proveedores-logos">
           <img src="./logo-playerytees.png" alt="logo de Playerytes" />
@@ -102,6 +110,27 @@
           <img src="./logo-prezenza.png" alt="logo de Prezenza" />
         </div>
       </section>
+      <section id="formulario" class="form-container">
+        <h3>Cotiza con nosotros</h3>
+        <form action="/submit-form" method="POST">
+            <label for="name">Nombre Completo:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="empresa">Nombre de la empresa:</label>
+            <input type="text" id="empresa" name="empresa">
+    
+            <label for="cantidad">Numero de piezas del pedido:</label>
+            <input type="number" id="cantidad" name="cantidad" min="0" required>
+    
+            <label for="tallas">Tallas del pedido:</label>
+            <input type="text" id="tallas" name="tallas" placeholder="De tallas regulares(S,M,L y XL) o tallas extras (2XL a 5XL)" required>
+    
+            <input type="submit" value="Enviar">
+        </form>
+    </section>    
     </main>
     <footer class="footer">
       <nav class="footer-nav">
